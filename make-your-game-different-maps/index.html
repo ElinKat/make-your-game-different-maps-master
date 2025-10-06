@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Brick-Breaker</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body id="body">
+        <h1>Brick-Breaker</h1>
+        <br>
+        <div class="container">
+            <div class="info-container">
+                <!-- ball speed -->
+                <div class="ballSpeed-container">
+                    <div class="ballText">Ball Speed Control</div>
+                    <div class="ballText2">Before starting the game, select the speed if necessary</div>
+                    <div id="ballSpeedOptions">
+                        <input type="radio" name="ballSpeed" value="slow"> Slow
+                        <input type="radio" name="ballSpeed" value="medium"> Medium
+                        <input type="radio" name="ballSpeed" value="fast"> Fast
+                    </div>
+                </div>
+
+                <div class="score-container">
+                    <h1>Game Scoreboard</h1>
+                    <div id="scoreboard"></div>
+                </div>
+            </div>
+
+            <!-- game -->
+            <div class="game-container" id="gameContainer">
+                <button id="startPauseBtn">Start</button>
+                <br>
+
+                <div class="gameOver" id="gameOver">
+                    Game Over! Press 'Space' to Restart
+                </div>
+                <br>
+
+                <!-- scoreform -->
+                <div class="scoreform" id="scoreFormContainer">
+                    <h2>Submit Your Score</h2>
+                    <form id="scoreForm">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required>
+                        <br>
+                        <br>
+                        <label for="scoreInput">Score:</label>
+                        <input type="number" id="scoreInput" name="score" readonly required>
+                        <br>
+                        <br>
+                        <label for="timeInput">Time:</label>
+                        <input type="number" id="timeInput" name="time" readonly required>
+                        <br>
+                        <br>
+                        <button type="submit">Submit</button>
+                    </form>
+                </div>
+
+                <div class="brickGame" id="brickGame">
+                    <div class = scoreAndLives>
+                        <div class="fps" id="fpsDisplay">FPS: <span id="fpsValue">0</span></div>
+                        <div class="score">Your score: <span id="score">0</span></div>
+                        <div class="time">Game Time: <span id="timer">0</span> sec</div>
+                        <br>
+                        <div class="lives">❤️: <span id="livesLeft">3</span></div>
+                        <br>
+                    </div>
+
+                    <div id="board">
+                        <div class="player" id="player"></div>
+                        <div class="ball" id="ball"></div>
+                        <div class="allBricks" id ="allBricks"></div>
+                    </div>
+                </div>
+
+            </div>
+
+             <!-- HTML to display PNG images -->
+             <div class="tile-container">
+                <div class="tile" id="reset" onclick="selectTile('reset')">Reset Design</div>
+
+                    <!-- body background  -->
+                <div class="tiles">
+
+                    <!-- <div class="tile" id="bodyBackground1" onclick="selectTile('bodyBackground1')">
+                        <img src="assets/bodyBackground1.png" alt="BodyBackground 1">
+                    </div>
+                    <div class="tile" id="bodyBackground2" onclick="selectTile('bodyBackground2')">
+                        <img src="assets/bodyBackground2.png" alt="BodyBackground 2">
+                    </div>
+                    <div class="tile" id="bodyBackground3" onclick="selectTile('bodyBackground3')">
+                        <img src="assets/bodyBackground3.png" alt="BodyBackground 3">
+                    </div> -->
+                    <!-- board background  -->
+                    <div class="tile" id="background1" onclick="selectTile('background1')">
+                        <img src="assets/background1.png" alt="Background 1">
+                    </div>
+                    <div class="tile" id="background2" onclick="selectTile('background2')">
+                        <img src="assets/background2.png" alt="Background 2">
+                    </div>
+                    <div class="tile" id="background3" onclick="selectTile('background3')">
+                        <img src="assets/background3.png" alt="Background 3">
+                    </div>
+                    <!-- ball background -->
+                    <div class="tile" id="ball1" onclick="selectTile('ball1')">
+                        <img src="assets/ball1.png" alt="ball 1">
+                    </div>
+                    <div class="tile" id="ball2" onclick="selectTile('ball2')">
+                        <img src="assets/ball2.png" alt="ball 2">
+                    </div>
+                    <div class="tile" id="ball3" onclick="selectTile('ball3')">
+                        <img src="assets/ball3.png" alt="ball 3">
+                    </div>
+                    <!-- paddle background -->
+                    <div class="tile" id="paddle1" onclick="selectTile('paddle1')">
+                        <img src="assets/paddleW1.png" alt="Paddle 1">
+                    </div>
+                    <div class="tile" id="paddle2" onclick="selectTile('paddle2')">
+                        <img src="assets/paddleW2.png" alt="Paddle 2">
+                    </div>
+                    <div class="tile" id="paddle3" onclick="selectTile('paddle3')">
+                        <img src="assets/paddleW3.png" alt="Paddle 3">
+                    </div>
+                    <!-- bricks background -->
+                    <div class="tile" id="brick1" onclick="selectTile('brick1')">
+                        <img src="assets/brickW1.png" alt="brick 1">
+                    </div>
+                    <div class="tile" id="brick2" onclick="selectTile('brick2')">
+                        <img src="assets/brickW2.png" alt="brick 2">
+                    </div>
+                    <div class="tile" id="brick3" onclick="selectTile('brick3')">
+                        <img src="assets/brickW3.png" alt="brick 3">
+                    </div>
+                </div>
+            </div>
+
+            <!-- <canvas id="game"></canvas> -->
+            
+        </div>
+        <script src="game.js"></script>
+    </body>
+</html>
