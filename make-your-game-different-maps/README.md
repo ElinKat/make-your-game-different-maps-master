@@ -23,13 +23,6 @@ Pause, resume, restart and reset functionality.
 Game over and game win scenarios.
 A set of tiles to generate a tile map
 
-## Authors
-
-Sandra Kannik
-Keiti Leppik
-Erlend Nukke
-Elin Katriin Luik
-
 ### Design
 Design comes from: https://opengameart.org
 
